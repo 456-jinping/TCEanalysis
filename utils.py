@@ -33,16 +33,13 @@ def read_fasta(fasta_file):
     return seq_dict
 
 def reverse_complement(seq):
-    valid_bases = "ATCGNRKYWSMHBVD"
+    valid_bases = "ATCG"
     for base in seq:
         if base not in valid_bases:
             raise ValueError(f"Invalid base {base} found in sequence")
     seq = ''.join('A' if base not in valid_bases else base for base in seq)
     complement = {
-        'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C','K': 'A',
-        'R': 'A', 'Y': 'C', 'M': 'A','N': 'A',
-        'W': 'A', 'S': 'C', 'H': 'A', 'B': 'C', 'V': 'A',
-        'D': 'A'
+        'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'
     }
     return ''.join([complement[base] for base in seq[::-1]])
 
