@@ -1,4 +1,4 @@
-name: TCE
+name: TCEanalysis
 channels:
   - bioconda
   - conda-forge
