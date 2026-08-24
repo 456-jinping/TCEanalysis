@@ -22,7 +22,7 @@ For the convenience of researchers, we have packaged all necessary dependencies 
 ### Step 1: Clone the repository  
 
 ``` 
-git clone https://github.com/yourusername/TCEanalysis.git  
+git clone https://github.com/Jin-PingChen/TCEanalysis.git  
 cd TCEanalysis  
 ```
 
