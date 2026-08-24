@@ -15,12 +15,13 @@ TCEanalysis/
 ├── run_UTNI.py               # Entry point: run UTNI‑TCE analysis  
 └── run_Leadinggene.py        # Entry point: run leading gene analysis  
 
-
-#Environment Setup  
+  
+# Environment Setup  
 For the convenience of researchers, we have packaged all necessary dependencies into a single `environment.yml` file. Users can set up the TCEanalysis environment by running `conda env create -f environment.yml`, which installs all required packages automatically. After activation, the pipeline can be run without additional configuration.  
-```
+
 ### Step 1: Clone the repository  
-```bash  
+
+``` 
 git clone https://github.com/yourusername/TCEanalysis.git  
 cd TCEanalysis  
 ```
