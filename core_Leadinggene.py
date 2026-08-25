@@ -100,25 +100,13 @@ def count_leading_genes(gene_annotation_file, species_name, gff3_folder, fasta_f
 
             if strand1 == '+' and strand2 == '+':
                 gap = start2 - end1
-                if gap > LEADING_LONG_GAP and gene1 not in processed_genes:
-                    leading_gene_count += 1
-                    processed_genes.add(gene1)
-                    reg_dict = process_leading_gene(
-                        gene1, chromosome1, strand_dict, genome_seq, rev_comp_cache,
-                        species_name, energy_file, start_codon_pos_dict, leading_rbs_strength_counter
-                    )
-                    all_leading_regions.update(reg_dict)
+                if gap > LEADING_LONG_GAP:
+                    _proc(gene2, chromosome1)
 
             elif strand1 == '-' and strand2 == '-':
-                gap = end2 - start1
-                if gap > LEADING_LONG_GAP and gene1 not in processed_genes:
-                    leading_gene_count += 1
-                    processed_genes.add(gene1)
-                    reg_dict = process_leading_gene(
-                        gene1, chromosome1, strand_dict, genome_seq, rev_comp_cache,
-                        species_name, energy_file, start_codon_pos_dict, leading_rbs_strength_counter
-                    )
-                    all_leading_regions.update(reg_dict)
+                gap = start2 - end1
+                if gap > LEADING_LONG_GAP:
+                    _proc(gene1, chromosome1)
 
             elif strand1 == '-' and strand2 == '+':
                 _proc(gene1, chromosome1)
