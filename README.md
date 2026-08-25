@@ -1,6 +1,8 @@
 # TCEanalysis
 The code for computational implementation of "Metagenomic mining of translational coupling elements enables programmable gene expression of polycistronic systems in E. coli".
 
+<img src="./TCEanalysis.png" alt="The workflow of mining translation coupling elements (TCEs) in rep698. " width="500">
+
 # Project Structure  
 
 TCEanalysis/  
